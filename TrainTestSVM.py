@@ -177,6 +177,7 @@ def traintest(n):
             i+=1
 
         clf = SVC()
+        #clf = RandomForestClassifier()
         clf.fit(X, y)
         res = clf.predict(test)
 
