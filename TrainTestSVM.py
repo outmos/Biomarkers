@@ -215,13 +215,13 @@ def traintest(n):
 
         mcc = ((tp * tn) - (fp * fn)) / sqrt((tp + fp) * (tp + fn) * (tn + fp) * (tn + fn))
         print('mcc', mcc)
-        presicion = tp / (tp + fp)
-        print('precision : ', presicion)
-        recall = tp / (fn + tp)
-        print('recall:', recall)
+        sensitivity = tp / (tp + fn)
+        print('precision : ', sensitivity)
+        specificity = tn / (fp + tn)
+        print('recall:', specificity)
 
 
-        results.append(count)
+        results.append([count, sensitivity,specificity])
         print("\n\n")
         return results
 
